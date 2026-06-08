@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Placement Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LEFT -->
+<div class="left">
+    <h1>College Placement Portal</h1>
+
+    <p style="color: #ddd;"></pstyle>
+        The College Placement Portal connects students, companies, and administrators
+        to streamline the recruitment process efficiently.
+    </p>
+
+    <p style="color: #ddd;">
+        Students can apply for jobs, companies can recruit talent, and admins manage
+        the entire workflow in a centralized system.
+    </p>
+
+    <div class="notice">
+        <h3>Notice Board</h3>
+        <p>• Welcome to Placement Portal</p>
+        <p>• New companies arriving soon</p>
+        <p>• Keep your profile updated</p>
+    </div>
+</div>
+
+<!-- RIGHT -->
+<div class="right">
+
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <form id="loginForm">
+
+            <!-- ROLE -->
+            <select id="role" required onchange="updateForm()">
+                <option value="">Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="student">Student</option>
+                <option value="company">Company</option>
+            </select>
+
+            <!-- USERNAME -->
+            <input type="text" id="username" placeholder="Enter Username" required>
+
+            <!-- PASSWORD AREA -->
+            <div id="passwordSection">
+                <input type="password" id="password" placeholder="Enter Password" required>
+            </div>
+
+            <button type="submit">LOGIN</button>
+
+            <p style="text-align:center; margin-top:15px;">
+    Don't have an account? 
+    <a href="signup.html" style="color: #FFD700; text-decoration:none;">
+        Sign up
+    </a>
+</p>
+
+        </form>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

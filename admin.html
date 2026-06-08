@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>CPP</h2>
+
+        <ul>
+            <li onclick="showPage('dashboard')">Dashboard</li>
+            <li onclick="showPage('students')">Students</li>
+            <li onclick="showPage('jobs')">Jobs</li>
+            <li onclick="showPage('companies')">Companies</li>
+            <li onclick="showPage('notices')">Notices</li>
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- DASHBOARD -->
+        <div id="dashboard" class="page active">
+            <h1>Dashboard</h1>
+
+            <div class="cards">
+                <div class="card">Total Students<br><b>0</b></div>
+                <div class="card">Placed<br><b>0</b></div>
+                <div class="card">Active Drives<br><b>0</b></div>
+                <div class="card">Companies<br><b>0</b></div>
+            </div>
+
+            <div class="section">
+                <h3>Branch-wise Placement</h3>
+                <p>No data available</p>
+            </div>
+
+            <div class="section">
+                <h3>Upcoming Drives</h3>
+                <p>No schedules available</p>
+            </div>
+        </div>
+
+        <!-- STUDENTS -->
+        <div id="students" class="page">
+            <h1>Students</h1>
+
+            <input type="text" placeholder="Search students">
+
+            <select>
+                <option>Filter by Branch</option>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>ME</option>
+            </select>
+
+            <table>
+                <tr><th>Name</th><th>Status</th></tr>
+                <tr><td>No Data</td><td>-</td></tr>
+            </table>
+        </div>
+
+        <!-- JOBS -->
+        <div id="jobs" class="page">
+            <h1>Jobs</h1>
+
+            <table>
+                <tr><th>Company</th><th>Role</th><th>Action</th></tr>
+                <tr>
+                    <td>No Jobs</td>
+                    <td>-</td>
+                    <td>
+                        <button>Approve</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- COMPANIES -->
+        <div id="companies" class="page">
+            <h1>Companies</h1>
+
+            <table>
+                <tr><th>Name</th><th>Status</th><th>Action</th></tr>
+                <tr>
+                    <td>No Companies</td>
+                    <td>-</td>
+                    <td>
+                        <button>Approve</button>
+                        <button>Reject</button>
+                        <button>Remove</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- NOTICES -->
+        <div id="notices" class="page">
+            <h1>Notices</h1>
+
+            <input type="text" id="noticeInput" placeholder="Enter notice">
+            <button onclick="addNotice()">Add</button>
+
+            <ul id="noticeList"></ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

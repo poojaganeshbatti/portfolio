@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f5f5;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #8B1E2D;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 12px;
+    margin: 10px 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    background: white;
+    color: #8B1E2D;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 25px;
+}
+
+/* PAGE SWITCH */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card b {
+    color: #8B1E2D;
+    font-size: 22px;
+}
+
+/* SECTIONS */
+.section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th {
+    background: #8B1E2D;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+}
+
+/* BUTTON */
+button {
+    background: #8B1E2D;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c63b49;
+}
+
+/* PROFILE LAYOUT */
+.profile-container {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    
+    align-items: flex-start;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* LEFT CARD */
+.profile-card {
+    flex: 1;
+    background:#8B1E2D;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* AVATAR */
+.avatar {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #f6b3c0, #ff6b81);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+/* SKILLS */
+.skills-box {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* RIGHT EDIT CARD */
+.edit-card {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* INPUTS */
+.edit-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}

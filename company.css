@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f0f0f0;
+}
+
+.main { display: flex; }
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #8B1E2D;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #a02835;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Content */
+.content { padding: 30px; flex: 1; }
+
+/* Cards */
+.cards { display: flex; gap: 20px; }
+.card {
+    background: #e6e6e6;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Sections */
+.section { display: none; }
+.active { display: block; }
+
+/* Table */
+table {
+    width: 100%;
+    background: #e6e6e6;
+    border-collapse: collapse;
+}
+th {
+    background: #8B1E2D;
+    color: white;
+}
+td, th { padding: 10px; }
+
+/* Status */
+.status { padding: 5px; border-radius: 6px; color: white; }
+.shortlisted { background: green; }
+
+/* ===== JOB CONTAINER ===== */
+.job-container {
+    background: #8B1E2D;
+    padding: 30px;
+    border-radius: 14px;
+    max-width: 1000px;
+    margin-top: 20px;
+    color: white;
+}
+
+/* GRID LAYOUT */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+/* FULL WIDTH */
+.full-width {
+    grid-column: span 2;
+}
+
+/* INPUTS */
+.job-container input,
+.job-container select,
+.job-container textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.6);
+    background: #a02835;
+    color: white;
+    font-size: 14px;
+}
+
+/* PLACEHOLDER TEXT (IMPORTANT) */
+.job-container input::placeholder,
+.job-container textarea::placeholder {
+    color: rgba(255,255,255,0.8);
+}
+
+/* SELECT TEXT COLOR FIX */
+.job-container select {
+    color: white;
+}
+
+/* TEXTAREA */
+.job-container textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 15px;
+    background: white;
+    color: #8B1E2D;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}

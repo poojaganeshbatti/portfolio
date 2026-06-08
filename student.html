@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="student.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>CPP</h2>
+
+        <ul>
+            <li onclick="showPage('dashboard')">Dashboard</li>
+            <li onclick="showPage('jobs')">Available Jobs</li>
+            <li onclick="showPage('applications')">My Applications</li>
+            <li onclick="showPage('profile')">Profile</li>
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- DASHBOARD -->
+        <div id="dashboard" class="page active">
+            <h1>Student Dashboard</h1>
+
+            <div class="cards">
+                <div class="card">Eligible Jobs<br><b>0</b></div>
+                <div class="card">Applied Jobs<br><b>0</b></div>
+                <div class="card">Shortlisted<br><b>0</b></div>
+                <div class="card">Rejected<br><b>0</b></div>
+            </div>
+
+            <div class="section">
+                <h3>Latest Announcements</h3>
+                <p>No updates available</p>
+            </div>
+        </div>
+
+        <!-- JOBS -->
+        <div id="jobs" class="page">
+            <h1>Available Jobs</h1>
+
+            <table>
+                <tr>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>No Jobs</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button>Apply</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- APPLICATIONS -->
+        <div id="applications" class="page">
+            <h1>My Applications</h1>
+
+            <table>
+                <tr>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>No Applications</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
+<!-- PROFILE -->
+<div id="profile" class="page">
+    <h1>My Profile</h1>
+
+    <div class="profile-container">
+
+        <!-- LEFT SIDE -->
+        <div class="profile-card">
+            <div class="avatar">A</div>
+            <h2 id="displayName">Your Name</h2>
+            <p>B.E - Branch</p>
+
+            <div class="stats">
+                <div><b id="displayCgpa">0.0</b><br>CGPA</div>
+                <div><b>0</b><br>Applied</div>
+                <div><b>0</b><br>Shortlisted</div>
+            </div>
+
+            <div class="skills-box">
+                <h4>Skills</h4>
+                <p id="displaySkills">No skills added</p>
+            </div>
+
+            <button onclick="uploadResume()">Upload Resume</button>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="edit-card">
+            <h3>Edit Profile</h3>
+
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="text" id="branch" placeholder="Branch">
+            <input type="number" step="0.01" id="cgpa" placeholder="CGPA">
+            <input type="text" id="skills" placeholder="Skills (comma separated)">
+
+            <button onclick="saveProfile()">Save Changes</button>
+        </div>
+
+    </div>
+</div>
+
+    </div>
+
+</div>
+
+<script src="student.js"></script>
+</body>
+</html>

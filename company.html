@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Placement System</title>
+<link rel="stylesheet" href="company.css">
+</head>
+
+<body>
+
+<div class="main">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>CPP</h2>
+
+    <button onclick="showSection('dashboard')">Dashboard</button>
+    <button onclick="showSection('post')">Jobs</button>
+    <button onclick="showSection('jobsPosted')">Jobs Posted</button>
+    <button onclick="showSection('applicants')">Students</button>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+<div id="dashboard" class="section active">
+    <h1>Dashboard</h1>
+    <div class="cards">
+        <div class="card"><p>Total Applicants</p><h2>0</h2></div>
+        <div class="card"><p>Shortlisted</p><h2>0</h2></div>
+        <div class="card"><p>Interviews</p><h2>0</h2></div>
+    </div>
+</div>
+
+<div id="post" class="section">
+    <h1>Post Jobs</h1>
+
+    <div class="job-container">
+
+        <div class="form-grid">
+            <input id="title" placeholder="Job Title" class="full-width">
+
+            <select id="type">
+                <option>Internship</option>
+                <option>Full Time</option>
+            </select>
+
+            <input id="dept" placeholder="Department">
+
+            <input id="package" placeholder="Package">
+            <input id="cgpa" placeholder="Min CGPA">
+
+            <input id="branches" placeholder="Eligible Branches" class="full-width">
+
+            <input id="skills" placeholder="Required Skills" class="full-width">
+
+            <textarea id="desc" placeholder="Job Description" class="full-width"></textarea>
+
+            <input id="deadline" type="date">
+            <input id="drive" type="date">
+        </div>
+
+        <button class="btn" onclick="postJob()">Post Job</button>
+
+    </div>
+</div>
+
+<div id="jobsPosted" class="section">
+    <h1>Jobs Posted</h1>
+    <div id="jobList"></div>
+</div>
+
+<div id="applicants" class="section">
+    <h1>Students</h1>
+    <table>
+        <tr>
+            <th>Name</th><th>Dept</th><th>CGPA</th><th>Status</th>
+        </tr>
+        <tr>
+            <td>Priya</td><td>CS</td><td>9.1</td>
+            <td><span class="status shortlisted">Placed</span></td>
+        </tr>
+    </table>
+</div>
+
+</div>
+</div>
+
+<script >
+function showSection(id) {
+    document.querySelectorAll(".section").forEach(sec => {
+        sec.classList.remove("active");
+    });
+
+    let section = document.getElementById(id);
+    if (section) {
+        section.classList.add("active");
+    } else {
+        console.log("Not found:", id);
+    }
+}
+
+// TEST
+console.log("JS is working");
+</script>
+</body>
+</html>
